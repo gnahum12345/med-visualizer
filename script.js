@@ -1204,7 +1204,7 @@ function switchPanelTab(tabName) {
     // Update tab buttons
     document.querySelectorAll('.panel-tab').forEach(tab => tab.classList.remove('active'));
     event.target.classList.add('active');
-    
+
     // Update tab content
     document.querySelectorAll('.panel-tab-content').forEach(content => content.classList.remove('active'));
     if (tabName === 'interactions') {
@@ -1218,9 +1218,9 @@ function switchPanelTab(tabName) {
 function updateQADrugSelect() {
     const select = document.getElementById('qaDrugSelect');
     if (!select) return;
-    
+
     const currentValue = select.value;
-    
+
     select.innerHTML = '<option value="">Select a medication...</option>';
     currentMedications.forEach(med => {
         const option = document.createElement('option');
@@ -1228,7 +1228,10 @@ function updateQADrugSelect() {
         option.textContent = med.brandName ? `${med.name} (${med.brandName})` : med.name;
         select.appendChild(option);
     });
-    
+
     // Restore previous selection if it still exists
     if (currentValue) select.value = currentValue;
 }
+
+
+

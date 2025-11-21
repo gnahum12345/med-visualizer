@@ -1103,6 +1103,7 @@ header {
     width: 100% !important;
     height: 100% !important;
 }
+
 /* Panel Tabs */
 .panel-tabs {
     display: flex;
@@ -1286,5 +1287,7 @@ header {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
